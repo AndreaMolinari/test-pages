@@ -11,8 +11,8 @@
     "deploy": "gh-pages -d web-build",
     "predeploy": "expo export:web"
   },
-  
-  "homepage": "http://evanbacon.github.io/expo-gh-pages",
+
+  "homepage": "https://andreamolinari.github.io/test-pages/",
   "dependencies": {
     "@expo/webpack-config": "^0.17.3",
     "@rneui/base": "^4.0.0-rc.7",
