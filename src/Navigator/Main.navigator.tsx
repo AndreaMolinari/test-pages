@@ -7,7 +7,9 @@ import BottomSheetComponent from "../LiFiZone";
 import * as Linking from "expo-linking";
 import { Text } from "@rneui/themed";
 
-const prefix = Linking.createURL("/");
+const linking = {
+  prefixes: ["lifi-zone://", "https://andreamolinari.github.io/test-pages/"],
+};
 const NavStack = createNativeStackNavigator();
 
 export default () => {
