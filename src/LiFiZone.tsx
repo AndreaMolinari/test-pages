@@ -1,7 +1,6 @@
-import { BottomSheet, Button, ListItem, Dialog } from "@rneui/themed";
+import { BottomSheet, Button, Dialog, ListItem } from "@rneui/themed";
 import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { StyleSheet } from "react-native";
 import { SignInDto } from "../generated";
 import { authApi } from "./api";
 import Background from "./Elements/Background";
