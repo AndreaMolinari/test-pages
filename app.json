@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "lifi-zone",
     "name": "lifi-zone",
     "slug": "lifi-zone",
     "version": "1.0.0",
@@ -30,8 +31,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "scope": "/test-pages/"
+      "favicon": "./assets/favicon.png",
+      "scope": "/test-pages/"
+    }
   }
 }
