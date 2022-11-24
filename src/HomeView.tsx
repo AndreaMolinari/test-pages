@@ -1,5 +1,5 @@
-import { useNavigation } from "@react-navigation/native";
-import { Text, useTheme } from "@rneui/themed";
+import { Link, useLinkTo, useNavigation } from "@react-navigation/native";
+import { Button, Text, useTheme } from "@rneui/themed";
 import React from "react";
 import { View } from "react-native";
 import Background from "./Elements/Background";
@@ -7,11 +7,13 @@ import Background from "./Elements/Background";
 const HomeView: React.FC = () => {
   const nav = useNavigation();
   const theme = useTheme();
+  const linkTo = useLinkTo();
+
   return (
     <Background>
-      <Text h2 onPress={() => nav.navigate("BottomSheet")}>
-        Ciao sono andrea
-      </Text>
+      <Button onPress={() => linkTo({ screen: "BottomSheet" })}>
+        <Text h2>Ciao sono andrea</Text>
+      </Button>
     </Background>
   );
 };
