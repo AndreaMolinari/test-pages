@@ -30,8 +30,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "base": "/test-pages/"
-    }
+      "favicon": "./assets/favicon.png"
+    },
+    "scope": "/test-pages/"
   }
 }
