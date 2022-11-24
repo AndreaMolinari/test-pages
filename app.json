@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#333333"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -19,16 +19,19 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "associatedDomains": ["applinks:expo.dev"]
+      "associatedDomains": [
+        "applinks:expo.dev"
+      ]
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#333333"
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "base": "test-pages"
     }
   }
 }
