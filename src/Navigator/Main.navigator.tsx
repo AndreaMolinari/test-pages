@@ -13,9 +13,6 @@ const linking = {
 const NavStack = createNativeStackNavigator();
 
 export default () => {
-  const linking = {
-    prefixes: [prefix],
-  };
   return (
     <NavigationContainer linking={linking} fallback={<Text>Loading...</Text>}>
       <NavStack.Navigator
