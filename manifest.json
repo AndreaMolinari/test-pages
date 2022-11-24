@@ -3,7 +3,6 @@
   "display": "standalone",
   "lang": "en",
   "name": "lifi-zone",
-  "scope": "./test-pages/",
   "short_name": "lifi-zone",
   "start_url": "/?utm_source=web_app_manifest",
   "orientation": "portrait",
