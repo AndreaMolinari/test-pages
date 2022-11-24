@@ -7,6 +7,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "start_url": ".",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -31,8 +32,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "scope": "./test-pages/"
+      "favicon": "./assets/favicon.png"
     }
   }
 }
