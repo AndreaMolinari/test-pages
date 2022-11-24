@@ -3,9 +3,8 @@
   "display": "standalone",
   "lang": "en",
   "name": "lifi-zone",
-  "scope": "/test-pages/",
   "short_name": "lifi-zone",
-  "start_url": "/?utm_source=web_app_manifest",
+  "start_url": "/test-pages/",
   "orientation": "portrait",
   "icons": [
     {
