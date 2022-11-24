@@ -11,7 +11,7 @@ const NavStack = createNativeStackNavigator();
 
 const configs = {
   screens: {
-    Home: "Home",
+    Home: "",
     BottomSheet: "BottomSheet",
     NoMatch: "*",
   },
