@@ -1,9 +1,10 @@
-import { BottomSheet, Button, ListItem } from "@rneui/themed";
+import { BottomSheet, Button, ListItem, Dialog } from "@rneui/themed";
 import React, { useState } from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { SignInDto } from "../generated";
 import { authApi } from "./api";
+import Background from "./Elements/Background";
 
 type BottomSheetComponentProps = {};
 
@@ -35,8 +36,12 @@ const BottomSheetComponent: React.FunctionComponent<
     }
   };
 
+  const [visibleCosaSotto, setVisibleCosaSotto] = React.useState(false);
+
   return (
-    <SafeAreaProvider>
+    <Background>
+      <TastoConModal visible={visibleCosaSotto} />
+
       <Button onPress={login} title="forte" />
       <Button
         title="Open Bottom Sheet"
@@ -55,8 +60,29 @@ const BottomSheetComponent: React.FunctionComponent<
             </ListItem.Content>
           </ListItem>
         ))}
+        <ListItem onPress={() => setVisibleCosaSotto((s) => !s)}>
+          <ListItem.Title>andasrea</ListItem.Title>
+        </ListItem>
       </BottomSheet>
-    </SafeAreaProvider>
+    </Background>
+  );
+};
+
+const TastoConModal: React.FC<{
+  visible: boolean;
+}> = (props) => {
+  const [isVisible, setIsVisible] = React.useState(false);
+  React.useEffect(() => {
+    setIsVisible(props.visible);
+  }, [props]);
+
+  return (
+    <Dialog
+      isVisible={isVisible}
+      onBackdropPress={() => setIsVisible((s) => !s)}
+    >
+      <Dialog.Title title="Bella pe me" />
+    </Dialog>
   );
 };
 
