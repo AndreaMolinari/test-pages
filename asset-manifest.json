@@ -1,25 +1,25 @@
 {
   "files": {
-    "app.js": "./static/js/app.c9c22541.chunk.js",
-    "app.js.map": "./static/js/app.c9c22541.chunk.js.map",
-    "runtime~app.js": "./static/js/runtime~app.318494c4.js",
-    "runtime~app.js.map": "./static/js/runtime~app.318494c4.js.map",
-    "static/js/2.a9b544f2.chunk.js": "./static/js/2.a9b544f2.chunk.js",
-    "static/js/2.a9b544f2.chunk.js.map": "./static/js/2.a9b544f2.chunk.js.map",
-    "favicon-16.png": "./favicon-16.png",
-    "favicon-32.png": "./favicon-32.png",
-    "favicon.ico": "./favicon.ico",
-    "index.html": "./index.html",
-    "manifest.json": "./manifest.json",
-    "serve.json": "./serve.json",
-    "static/js/2.a9b544f2.chunk.js.LICENSE.txt": "./static/js/2.a9b544f2.chunk.js.LICENSE.txt",
-    "static/media/bell.png": "./static/media/bell.cf04af27.png",
-    "static/media/heart.png": "./static/media/heart.23b5c2c0.png",
-    "static/media/rocket.png": "./static/media/rocket.d2f3bf41.png",
-    "static/media/star.png": "./static/media/star.69c71386.png"
+    "app.js": "/test-pages/static/js/app.c9c22541.chunk.js",
+    "app.js.map": "/test-pages/static/js/app.c9c22541.chunk.js.map",
+    "runtime~app.js": "/test-pages/static/js/runtime~app.5e749a83.js",
+    "runtime~app.js.map": "/test-pages/static/js/runtime~app.5e749a83.js.map",
+    "static/js/2.a9b544f2.chunk.js": "/test-pages/static/js/2.a9b544f2.chunk.js",
+    "static/js/2.a9b544f2.chunk.js.map": "/test-pages/static/js/2.a9b544f2.chunk.js.map",
+    "favicon-16.png": "/test-pages/favicon-16.png",
+    "favicon-32.png": "/test-pages/favicon-32.png",
+    "favicon.ico": "/test-pages/favicon.ico",
+    "index.html": "/test-pages/index.html",
+    "manifest.json": "/test-pages/manifest.json",
+    "serve.json": "/test-pages/serve.json",
+    "static/js/2.a9b544f2.chunk.js.LICENSE.txt": "/test-pages/static/js/2.a9b544f2.chunk.js.LICENSE.txt",
+    "static/media/bell.png": "/test-pages/static/media/bell.cf04af27.png",
+    "static/media/heart.png": "/test-pages/static/media/heart.23b5c2c0.png",
+    "static/media/rocket.png": "/test-pages/static/media/rocket.d2f3bf41.png",
+    "static/media/star.png": "/test-pages/static/media/star.69c71386.png"
   },
   "entrypoints": [
-    "static/js/runtime~app.318494c4.js",
+    "static/js/runtime~app.5e749a83.js",
     "static/js/2.a9b544f2.chunk.js",
     "static/js/app.c9c22541.chunk.js"
   ]
