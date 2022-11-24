@@ -32,7 +32,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "startUrl": "/test-pages/"
+      "scope": "./test-pages/"
     }
   }
 }
