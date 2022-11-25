@@ -1,20 +1,18 @@
-import { Link, useLinkTo, useNavigation } from "@react-navigation/native";
-import { Button, Header, Text } from "@rneui/themed";
+import { useLinkTo } from "@react-navigation/native";
+import { Button, Header } from "@rneui/base";
 import React from "react";
+import { MainStackParamList } from "../Navigator/Main.screen";
 
 export default () => {
-  const linkTo = useLinkTo();
+  const linkTo = useLinkTo<MainStackParamList>();
   return (
-    <Header
-      style={{
-        flexDirection: "row",
-        justifyContent: "space-around",
-      }}
-    >
-      <Button onPress={() => linkTo({ screen: "Home" })}>
-        <Text h3>Ciao sono header</Text>
-      </Button>
-      <Button color={"secondary"} size={"sm"} raised title="Hey!" />
+    <Header>
+      <Button
+        raised
+        onPress={() => linkTo({ screen: "Home" })}
+        color="secondary"
+        title="Go Home"
+      />
     </Header>
   );
 };

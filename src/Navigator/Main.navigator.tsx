@@ -2,9 +2,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Text } from "@rneui/themed";
 import React from "react";
+import BottomSheetComponent from "../BottomSheet";
 import Header from "../Elements/Header";
 import HomeView from "../HomeView";
-import BottomSheetComponent from "../LiFiZone";
 import NotFound from "../NotFoundView";
 
 const NavStack = createNativeStackNavigator();
@@ -18,7 +18,11 @@ const configs = {
 };
 
 const linking = {
-  prefixes: ["lifi-zone://", "https://andreamolinari.github.io/test-pages/"],
+  prefixes: [
+    "lifi-zone://",
+    "https://andreamolinari.github.io/test-pages/",
+    "http://localhost:19006/test-pages/",
+  ],
   config: configs,
 };
 

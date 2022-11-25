@@ -1,18 +1,18 @@
-import { Link, useLinkTo, useNavigation } from "@react-navigation/native";
-import { Button, Text, useTheme } from "@rneui/themed";
+import { useLinkTo } from "@react-navigation/native";
+import { Button } from "@rneui/base";
+import { Text } from "@rneui/themed";
 import React from "react";
-import { View } from "react-native";
 import Background from "./Elements/Background";
+import { MainStackParamList } from "./Navigator/Main.screen";
 
 const HomeView: React.FC = () => {
-  const nav = useNavigation();
-  const theme = useTheme();
-  const linkTo = useLinkTo();
+  const linkTo = useLinkTo<MainStackParamList>();
 
   return (
-    <Background>
+    <Background safeMode>
+      <Text h1>Io sono la home</Text>
       <Button onPress={() => linkTo({ screen: "BottomSheet" })}>
-        <Text h2>Ciao sono andrea</Text>
+        <Text>BottomSheet</Text>
       </Button>
     </Background>
   );

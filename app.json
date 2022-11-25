@@ -31,10 +31,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "build": {
-        "publicPath": "https://andreamolinari.github.io/test-pages/"
-      }
+      "favicon": "./assets/favicon.png"
     }
   }
 }
