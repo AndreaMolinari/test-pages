@@ -2,11 +2,12 @@ import { useLinkTo } from "@react-navigation/native";
 import { Button } from "@rneui/base";
 import { Text } from "@rneui/themed";
 import React from "react";
-import { Alert, Linking, TouchableOpacity } from "react-native";
+import { Alert, Linking, TouchableOpacity, View } from "react-native";
+import { ButtonGroup, ButtonProps } from "react-native-elements";
 import Background from "./Elements/Background";
 import { MainStackParamList } from "./Navigator/Main.screen";
 
-interface UrlButton extends React.PropsWithChildren {
+interface UrlButton extends ButtonProps {
   scheme: string;
 }
 
@@ -18,35 +19,69 @@ const Link: React.FC<UrlButton> = (props) => {
     if (supported) {
       await Linking.openURL(props.scheme);
     } else {
-      Alert.alert(`Don't know how to open this URL: ${props.scheme}`);
+      Alert.alert(`Non so come aprire questo url: ${props.scheme}`);
     }
   }, [props]);
 
+  const type = React.useMemo(() => {
+    return props.type || "outline";
+  }, [props]);
+
+  return <Button {...props} type={type} onPress={handlePress} />;
+};
+
+interface Btn {
+  title: string;
+  screen: string;
+}
+
+const buttons: Btn[] = [
+  {
+    title: "Home",
+    screen: "/Home",
+  },
+  {
+    title: "BottomSheet",
+    screen: "/BottomSheet",
+  },
+];
+
+interface MainNav {
+  buttons: Btn[];
+}
+
+const MainNav: React.FC<MainNav> = (props) => {
+  const linkTo = useLinkTo<MainStackParamList>();
   return (
-    <TouchableOpacity onPress={handlePress}>
-      <>{props.children}</>
-    </TouchableOpacity>
+    <View style={{ marginHorizontal: "auto", flexDirection: "row" }}>
+      {props.buttons.map((b, i) => (
+        <Button onPress={() => linkTo(b.screen)} key={i} title={b.title} />
+      ))}
+    </View>
   );
 };
 
 const HomeView: React.FC = () => {
   const linkTo = useLinkTo<MainStackParamList>();
-
   return (
     <Background safeMode>
-      <Text h1>Io sono la home</Text>
-
-      <Link scheme="whatsapp://send?text=Hello%2C%20World!">
-        <Text>Saluta Qualcuno su whatsapp</Text>
-      </Link>
-
-      <Link scheme="lifiart://Home">
-        <Text>Apri lifiapp</Text>
-      </Link>
-
-      <Button onPress={() => linkTo({ screen: "BottomSheet" })}>
-        <Text>BottomSheet</Text>
-      </Button>
+      <MainNav buttons={buttons} />
+      <View>
+        <Text h1>Io sono la home</Text>
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-evenly",
+          paddingVertical: 10,
+        }}
+      >
+        <Link
+          scheme="whatsapp://send?text=Hello%2C%20World!"
+          title="Saluta Qualcuno su whatsapp"
+        />
+        <Link scheme="lifiart://Home" title="Apri lifiapp" />
+      </View>
     </Background>
   );
 };

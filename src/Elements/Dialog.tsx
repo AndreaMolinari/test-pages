@@ -23,9 +23,10 @@ export default (props: TastoConModalProps) => {
 
   return (
     <Dialog isVisible={isVisible} onBackdropPress={action}>
-      <Dialog.Title>
-        <Text>Dialog</Text>
-      </Dialog.Title>
+      <Dialog.Title
+        title="Dialog"
+        titleProps={{ style: { color: "white" } }}
+      />
       <Text>
         {`Se clicchi fuori mi chiudo ${
           props.closeOnBackdropPress ? "✅" : "❌"

@@ -1,6 +1,6 @@
 import { Button } from "@rneui/base";
 import { BottomSheet, ListItem } from "@rneui/themed";
-import React, { useState } from "react";
+import React from "react";
 import {
   GestureResponderEvent,
   StyleProp,
@@ -22,7 +22,7 @@ type ListItemProps = {
 type ListProps = ListItemProps[];
 
 const BottomSheetComponent: React.FC<BottomSheetComponentProps> = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
   const [visibleDialog, setVisibleDialog] = React.useState(false);
 
   const list: ListProps = [
