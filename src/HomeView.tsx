@@ -38,11 +38,11 @@ interface Btn {
 const buttons: Btn[] = [
   {
     title: "Home",
-    screen: "/Home",
+    screen: "Home",
   },
   {
-    title: "BottomSheet",
-    screen: "/BottomSheet",
+    title: "Pagina",
+    screen: "BottomSheet",
   },
 ];
 
@@ -55,7 +55,11 @@ const MainNav: React.FC<MainNav> = (props) => {
   return (
     <View style={{ marginHorizontal: "auto", flexDirection: "row" }}>
       {props.buttons.map((b, i) => (
-        <Button onPress={() => linkTo(b.screen)} key={i} title={b.title} />
+        <Button
+          onPress={() => linkTo({ screen: b.screen })}
+          key={i}
+          title={b.title}
+        />
       ))}
     </View>
   );
