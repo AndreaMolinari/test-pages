@@ -1,12 +1,6 @@
 import axios from "axios";
-import React from "react";
 import "react-native-url-polyfill/auto";
-import {
-  AuthApi,
-  AuthApiFactory,
-  Configuration,
-  SignInDto,
-} from "../generated";
+import { AuthApi, Configuration } from "../generated";
 
 const config = new Configuration();
 

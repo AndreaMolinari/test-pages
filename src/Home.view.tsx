@@ -2,8 +2,8 @@ import { useLinkTo } from "@react-navigation/native";
 import { Button } from "@rneui/base";
 import { Text } from "@rneui/themed";
 import React from "react";
-import { Alert, Linking, TouchableOpacity, View } from "react-native";
-import { ButtonGroup, ButtonProps } from "react-native-elements";
+import { Alert, Linking, View } from "react-native";
+import { ButtonProps } from "react-native-elements";
 import Background from "./Elements/Background";
 import { MainStackParamList } from "./Navigator/Main.screen";
 
@@ -30,61 +30,22 @@ const Link: React.FC<UrlButton> = (props) => {
   return <Button {...props} type={type} onPress={handlePress} />;
 };
 
-interface Btn {
-  title: string;
-  screen: string;
-}
-
-const buttons: Btn[] = [
-  {
-    title: "Home",
-    screen: "Home",
-  },
-  {
-    title: "Pagina",
-    screen: "BottomSheet",
-  },
-];
-
-interface MainNav {
-  buttons: Btn[];
-}
-
-const MainNav: React.FC<MainNav> = (props) => {
-  const linkTo = useLinkTo<MainStackParamList>();
-  return (
-    <View style={{ marginHorizontal: "auto", flexDirection: "row" }}>
-      {props.buttons.map((b, i) => (
-        <Button
-          onPress={() => linkTo({ screen: b.screen })}
-          key={i}
-          title={b.title}
-        />
-      ))}
-    </View>
-  );
-};
-
 const HomeView: React.FC = () => {
-  const linkTo = useLinkTo<MainStackParamList>();
   return (
     <Background safeMode>
-      <MainNav buttons={buttons} />
       <View>
         <Text h1>Io sono la home</Text>
       </View>
       <View
         style={{
           flexDirection: "row",
+          flexWrap: "wrap",
           justifyContent: "space-evenly",
           paddingVertical: 10,
+          gap: 5,
         }}
       >
-        <Link
-          scheme="whatsapp://send?text=Hello%2C%20World!"
-          title="Saluta Qualcuno su whatsapp"
-        />
-        <Link scheme="lifiart://Home" title="Apri lifiapp" />
+        <Link scheme="lifi-zone://Home" title="Apri l'app di test-pages" />
       </View>
     </Background>
   );

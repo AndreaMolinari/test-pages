@@ -1,3 +1,5 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+
 export type ScreenOption = {
   [key: string]: {
     component: React.FC;
@@ -10,8 +12,11 @@ export type ScreenOption = {
 export type MainStackParamList = {
   Home: undefined;
   BottomSheet: undefined;
+  CosaFaccio: undefined;
   NoMatch: undefined;
 };
+
+type HomeScreenProps = any;
 
 // export type MainStackParams = NavigationProp<MainStackParamList>;
 
